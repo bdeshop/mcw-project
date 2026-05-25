@@ -256,8 +256,8 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onLoginClick, onSig
   );
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-casino-bg border-b border-white/5 shadow-lg">
-      <div className="container mx-auto flex items-center justify-between gap-3 px-4 h-[54px] md:h-[76px]">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#232a44] md:bg-casino-bg border-b border-white/5 md:border-white/5 shadow-[0_8px_24px_rgba(0,0,0,0.18)] md:shadow-lg">
+      <div className="container mx-auto flex items-center justify-between gap-3 px-3 md:px-4 h-16 md:h-19">
         <div className="flex items-center gap-3 md:gap-6">
           <button onClick={onMenuClick} className="text-white hover:text-casino-gold transition-colors p-2">
             <Menu className="h-5 w-5 md:h-6 md:w-6" />
@@ -268,13 +268,6 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onLoginClick, onSig
         </div>
 
         <div className="flex items-center gap-4 md:gap-2.5">
-          {/* Language Flag - Mobile Only */}
-          <button onClick={onLangClick} className="md:hidden h-7 w-7 rounded-full bg-[#1e2439] relative overflow-hidden border border-white/10 flex items-center justify-center p-1 group">
-            <div className="h-full w-full rounded-full bg-red-600 flex items-center justify-center p-0.5 relative shadow-inner">
-              <div className="h-2 w-2 bg-green-500 rounded-full" />
-            </div>
-          </button>
-
           {/* Mobile CS Section */}
           <div onClick={onContactClick} className="md:hidden flex flex-col items-center cursor-pointer active:scale-95 transition-all">
             <Headphones className="h-4 w-4 text-casino-gold" />
@@ -306,7 +299,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onLoginClick, onSig
       </div>
 
       {/* Navigation - Mobile optimized with icons above labels */}
-      <nav className="bg-[#232a44] border-b border-white/5 relative z-40" ref={megaMenuRef}>
+      <nav className="hidden md:block bg-[#232a44] border-b border-white/5 relative z-40" ref={megaMenuRef}>
         <div className="h-[58px] md:h-[52px]">
           <ul className="container mx-auto flex items-center h-full px-4 overflow-x-auto no-scrollbar scroll-smooth">
             {NAV.map((n) => {
@@ -360,7 +353,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onLoginClick, onSig
 
               {/* Mega Menu Content */}
               <AnimatePresence mode="wait">
-                {activeCategory === "HOT" && <MegaMenu />}
+                {activeCategory && activeCategory !== "Promotions" && activeCategory !== "VIP" && <MegaMenu />}
               </AnimatePresence>
             </div>
           )}

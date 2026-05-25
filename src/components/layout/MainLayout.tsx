@@ -118,6 +118,10 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
           onWinnerClick={() => setIsWinnerOpen(true)}
           onContactClick={() => setIsContactOpen(true)}
           onCSClick={() => setIsCSOpen(true)}
+          isLoggedIn={isLoggedIn}
+          user={user}
+          openAuth={openAuth}
+          onLogout={() => setIsLoggedIn(false)}
         />
       )}
 
@@ -253,18 +257,20 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         />
       )}
 
+      {!isAffiliatePage && (
+        <MobileNavbar
+          isLoggedIn={isLoggedIn}
+          isAccountOpen={isAccountOpen}
+          setIsAccountOpen={setIsAccountOpen}
+          setIsLangOpen={setIsLangOpen}
+          openAuth={openAuth}
+          openWallet={openWallet}
+        />
+      )}
+
       <div className="flex-1">
         {children}
       </div>
-
-      <MobileNavbar
-        isLoggedIn={isLoggedIn}
-        isAccountOpen={isAccountOpen}
-        setIsAccountOpen={setIsAccountOpen}
-        setIsLangOpen={setIsLangOpen}
-        openAuth={openAuth}
-        openWallet={openWallet}
-      />
 
       {!isAffiliatePage && <Footer onContactClick={() => setIsContactOpen(true)} />}
     </div>

@@ -24,13 +24,11 @@ export const GameProviders = () => {
   const duplicatedLogos = [...providerLogos, ...providerLogos, ...providerLogos, ...providerLogos];
 
   return (
-    <section className="container mx-auto px-4 overflow-hidden">
+    <section id="game-providers" className="container mx-auto  overflow-hidden">
       <SectionTitle title={t("gameProviders")} />
       
-      <div className="relative mt-8">
-        {/* Fading Edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-casino-bg via-casino-bg/80 to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-casino-bg via-casino-bg/80 to-transparent z-10" />
+      <div className="relative">
+
 
         <div className="flex overflow-hidden">
           <motion.div 
@@ -45,7 +43,7 @@ export const GameProviders = () => {
             {duplicatedLogos.map((logo, i) => (
               <div 
                 key={i} 
-                className="flex items-center justify-center min-w-[140px] group transition-all"
+                className="flex items-center justify-center min-w-20 group transition-all"
               >
                 <img 
                   src={logo} 

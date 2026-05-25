@@ -24,7 +24,7 @@ export const Favourites = () => {
   }, [slides.length]);
 
   return (
-    <section className="container mx-auto pb-8 overflow-hidden px-4">
+    <section id="favourites" className="container mx-auto pb-4 md:pb-8 overflow-hidden px-2 md:px-4">
       <SectionTitle title={t("favourites")} />
       
       <div className="relative w-full overflow-hidden">

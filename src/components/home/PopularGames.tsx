@@ -6,7 +6,7 @@ import { useLanguage } from "../../context/LanguageContext";
 export const PopularGames = () => {
   const { t } = useLanguage();
   return (
-    <section className="container mx-auto pb-8 px-4">
+    <section id="popular-games" className="container mx-auto pb-4 md:pb-8 px-2 md:px-4">
       <SectionTitle title={t("popularGames")} />
       <div className="flex md:grid md:grid-cols-6 gap-3 md:gap-3 overflow-x-auto no-scrollbar -mx-3 px-3 md:mx-0 md:px-0 pb-1">
         {POPULAR.map((g, i) => (

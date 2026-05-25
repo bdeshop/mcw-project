@@ -14,7 +14,7 @@ const PROMOS = [
     time: "Limited Time Offer",
     tag: "SLOTS",
     badge: "Bonus",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-ncvip-slots.jpg",
+    img: "/src/assets/promotion/image.png",
     cat: "Slots"
   },
   {
@@ -23,7 +23,7 @@ const PROMOS = [
     sub: "Top-Up Reward",
     time: "16/04/2026 00:00 ~ 01/01/2027 00:00",
     tag: "ALL",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-6unlimited.jpg",
+    img: "/src/assets/promotion/image copy.png",
     cat: "Welcome offer"
   },
   {
@@ -32,7 +32,7 @@ const PROMOS = [
     sub: "Recovery Bonus",
     time: "Limited Time Offer",
     tag: "ALL",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-35rescue.jpg",
+    img: "/src/assets/promotion/image copy 2.png",
     cat: "Other"
   },
   {
@@ -42,7 +42,7 @@ const PROMOS = [
     time: "Ongoing Promotion",
     tag: "ALL",
     badge: "Bonus",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-100welcome.jpg",
+    img: "/src/assets/promotion/image copy 3.png",
     cat: "Welcome offer"
   },
   {
@@ -52,7 +52,7 @@ const PROMOS = [
     time: "Limited Time Offer",
     tag: "ALL",
     badge: "Bonus",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-300bonus.jpg",
+    img: "/src/assets/promotion/image copy 4.png",
     cat: "Other"
   },
   {
@@ -61,8 +61,27 @@ const PROMOS = [
     sub: "Daily Reward",
     time: "Limited Time Offer",
     tag: "ALL",
-    img: "https://img.m167cw.com/mcw/h5/assets/images/promotion/banner-luckyspin.jpg",
+    img: "/src/assets/promotion/image copy 5.png",
     cat: "Slots"
+  },
+  {
+    id: 7,
+    title: "Weekly Sports Cash Rebate - Live Now",
+    sub: "Sports Rebate",
+    time: "Weekly Offer",
+    tag: "SPORTS",
+    badge: "Hot",
+    img: "/src/assets/promotion/image copy 6.png",
+    cat: "Sports"
+  },
+  {
+    id: 8,
+    title: "Live Casino Referral Bonus Boost",
+    sub: "Referral Commission",
+    time: "Ongoing Promotion",
+    tag: "CASINO",
+    img: "/src/assets/promotion/image copy 7.png",
+    cat: "Live Casino"
   }
 ];
 
@@ -114,11 +133,11 @@ export const PromotionsPage = () => {
               className="bg-[#161b2e]  overflow-hidden flex flex-col group border border-white/5 hover:border-casino-gold/30 transition-all hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
             >
               {/* Image with Tag & Badge */}
-              <div className="relative aspect-[16/8.5] overflow-hidden">
+              <div className="relative overflow-hidden bg-[#101424]">
                 <img
                   src={promo.img}
                   alt={promo.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#161b2e] via-transparent to-transparent opacity-60" />
 
